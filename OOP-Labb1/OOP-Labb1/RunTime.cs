@@ -75,6 +75,7 @@ namespace OOP_Labb1
                         }
                         else
                         {
+                            k
 
                             int i = 1;
                             foreach (Dog dog in dogs)
