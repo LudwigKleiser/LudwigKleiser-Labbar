@@ -8,31 +8,31 @@ namespace OOP_Labb1
 {
     class RunTime
     {
-          List<Dog> dogs = new List<Dog>();
+        List<Dog> dogs = new List<Dog>();
         public void Start()
         {
-            Dog d1 = new Dog("Ludde", 5, "Bulldog");
-            Dog d2 = new Dog("Dutten", 2, "Tax");
-            Dog d3 = new Dog("Plutten", 7, "Pug");
+            //Dog d1 = new Dog("Ludde", 5, "Bulldog");
+            //Dog d2 = new Dog("Dutten", 2, "Tax");
+            //Dog d3 = new Dog("Plutten", 7, "Pug");
 
 
-            Console.WriteLine(d1.Name + " " + d1.Age + " " + d1.Breed);
-            Console.WriteLine(d2.Name + " " + d2.Age + " " + d2.Breed);
-            Console.WriteLine(d3.Name + " " + d3.Age + " " + d3.Breed);
+            //Console.WriteLine(d1.Name + " " + d1.Age + " " + d1.Breed);
+            //Console.WriteLine(d2.Name + " " + d2.Age + " " + d2.Breed);
+            //Console.WriteLine(d3.Name + " " + d3.Age + " " + d3.Breed);
 
-           
-            dogs.Add(d1);
-            dogs.Add(d2);
-            dogs.Add(d3);
 
-            foreach (Dog dog in dogs)
-            {
-                Console.WriteLine(dog.Name + " " + dog.Age + " " + dog.Breed);
-            }
+            //dogs.Add(d1);
+            //dogs.Add(d2);
+            //dogs.Add(d3);
+
+            //foreach (Dog dog in dogs)
+            //{
+            //    Console.WriteLine(dog.Name + " " + dog.Age + " " + dog.Breed);
+            //}
             bool isRunning = true;
             while (isRunning)
             {
-
+                //Console.Clear();
                 Console.WriteLine("[1] Lägg till en ny hund");
                 Console.WriteLine("[2] Ta bort hund");
                 Console.WriteLine("[3] Visa alla hundar");
@@ -65,27 +65,48 @@ namespace OOP_Labb1
                         break;
 
                     case 2:
-
-                        int i = 1;
-                        foreach (Dog dog in dogs)
+                        if (!dogs.Any())
                         {
-                            Console.WriteLine("[{0}]" + dog.DogFormatString(), i);
-                            i++;
+                            Console.WriteLine("Det finns inga hundar arkviet än!");
+                            Console.WriteLine("Tryck på valfri knapp för att återgå till menyn");
+                            Console.ReadKey();
+
+
                         }
-                        Console.WriteLine("Ange hundens siffra för att ta bort den");
-                        Console.Write("Val: ");
-                        string userValue = Console.ReadLine();
-                        int userChoice = Convert.ToInt32(userValue);
-                        userChoice--;
-                        dogs.RemoveAt(userChoice);
+                        else
+                        {
+
+                            int i = 1;
+                            foreach (Dog dog in dogs)
+                            {
+                                Console.WriteLine("[{0}]" + dog.DogFormatString(), i);
+                                i++;
+                            }
+                            Console.WriteLine("Ange hundens siffra för att ta bort den");
+                            Console.Write("Val: ");
+                            string userValue = Console.ReadLine();
+                            int userChoice = Convert.ToInt32(userValue);
+                            userChoice--;
+                            dogs.RemoveAt(userChoice);
+                        }
 
                         break;
 
                     case 3:
-
-                        foreach (Dog dog in dogs)
+                        if (!dogs.Any())
                         {
-                            Console.WriteLine(dog.DogFormatString());                           
+                            Console.WriteLine("Det finns inga hundar arkviet än!");
+                            Console.WriteLine("Tryck på valfri knapp för att återgå till menyn");
+                            Console.ReadKey();
+
+
+                        }
+                        else
+                        {
+                            foreach (Dog dog in dogs)
+                            {
+                                Console.WriteLine(dog.DogFormatString());
+                            }
                         }
                         break;
 
