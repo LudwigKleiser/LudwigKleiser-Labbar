@@ -32,11 +32,12 @@ namespace OOP_Labb1
             bool isRunning = true;
             while (isRunning)
             {
-                //Console.Clear();
+                Console.Clear();
                 Console.WriteLine("[1] Lägg till en ny hund");
                 Console.WriteLine("[2] Ta bort hund");
                 Console.WriteLine("[3] Visa alla hundar");
                 Console.WriteLine("[4] Avsluta");
+                Console.Write("Val: ");
                 int menyChoice;
                 int.TryParse(Console.ReadLine(), out menyChoice);
 
@@ -75,8 +76,8 @@ namespace OOP_Labb1
                         }
                         else
                         {
-                            k
 
+                            Console.Clear();
                             int i = 1;
                             foreach (Dog dog in dogs)
                             {
@@ -86,9 +87,25 @@ namespace OOP_Labb1
                             Console.WriteLine("Ange hundens siffra för att ta bort den");
                             Console.Write("Val: ");
                             string userValue = Console.ReadLine();
-                            int userChoice = Convert.ToInt32(userValue);
-                            userChoice--;
-                            dogs.RemoveAt(userChoice);
+                            
+                            try
+                            {
+                                 int userChoice = Convert.ToInt32(userValue);
+                                userChoice--;
+                                dogs.RemoveAt(userChoice);
+
+                            }
+                            catch (Exception)
+                            {
+
+                                Console.WriteLine("Någonting gick fel, tryck på valfriknapp för att försöka igen");
+                                Console.ReadKey();
+                                goto case 2;
+                                
+                            }
+                            //int userChoice = Convert.ToInt32(userValue);
+                            
+                            //dogs.RemoveAt(userChoice--);
                         }
 
                         break;
@@ -108,6 +125,7 @@ namespace OOP_Labb1
                             {
                                 Console.WriteLine(dog.DogFormatString());
                             }
+                            Console.ReadKey();
                         }
                         break;
 
@@ -119,6 +137,8 @@ namespace OOP_Labb1
                     default:
 
                         Console.WriteLine("Vänligen ange en siffra.");
+                        Console.WriteLine("Tryck på valfri knapp för att återgå till menyn");
+                        Console.ReadKey();
                         break;
                 }
             }
