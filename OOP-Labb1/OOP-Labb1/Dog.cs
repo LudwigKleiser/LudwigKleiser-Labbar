@@ -18,5 +18,11 @@ namespace OOP_Labb1
             Age = age;
             Breed = breed;
         }
+
+        public string PrintToScreen()
+        {
+            return String.Format("Hunden heter: {0}, är: {1} år gammal och är av rasen: {2}",
+                Name, Age, Breed);
+        }
     }
 }
