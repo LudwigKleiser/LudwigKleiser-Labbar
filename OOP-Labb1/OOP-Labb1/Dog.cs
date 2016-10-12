@@ -8,6 +8,7 @@ namespace OOP_Labb1
 {
     class Dog
     {
+       
         public string Name { get; set; }
         public int Age { get; set; }
         public string Breed { get; set; }
@@ -19,10 +20,12 @@ namespace OOP_Labb1
             Breed = breed;
         }
 
-        public string PrintToScreen()
+        public string DogFormatString()
         {
             return String.Format("Hunden heter: {0}, är: {1} år gammal och är av rasen: {2}",
                 Name, Age, Breed);
         }
+
+        
     }
 }

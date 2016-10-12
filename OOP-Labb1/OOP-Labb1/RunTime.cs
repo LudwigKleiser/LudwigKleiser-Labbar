@@ -8,6 +8,7 @@ namespace OOP_Labb1
 {
     class RunTime
     {
+          List<Dog> dogs = new List<Dog>();
         public void Start()
         {
             Dog d1 = new Dog("Ludde", 5, "Bulldog");
@@ -19,7 +20,7 @@ namespace OOP_Labb1
             Console.WriteLine(d2.Name + " " + d2.Age + " " + d2.Breed);
             Console.WriteLine(d3.Name + " " + d3.Age + " " + d3.Breed);
 
-            List<Dog> dogs = new List<Dog>();
+           
             dogs.Add(d1);
             dogs.Add(d2);
             dogs.Add(d3);
@@ -68,9 +69,11 @@ namespace OOP_Labb1
                         int i = 1;
                         foreach (Dog dog in dogs)
                         {
-                            Console.WriteLine("[{0}]" + dog.PrintToScreen(), i);
+                            Console.WriteLine("[{0}]" + dog.DogFormatString(), i);
                             i++;
                         }
+                        Console.WriteLine("Ange hundens siffra för att ta bort den");
+                        Console.Write("Val: ");
                         string userValue = Console.ReadLine();
                         int userChoice = Convert.ToInt32(userValue);
                         userChoice--;
@@ -82,7 +85,7 @@ namespace OOP_Labb1
 
                         foreach (Dog dog in dogs)
                         {
-                            Console.WriteLine(dog.PrintToScreen());                           
+                            Console.WriteLine(dog.DogFormatString());                           
                         }
                         break;
 
