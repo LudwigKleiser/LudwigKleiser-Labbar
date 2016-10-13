@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Arv indikeras med solida pilar.">
+    <Position X="8.35" Y="1" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Studen och Teacher kommer &quot;ärva&quot; alla properties från Person.">
+    <Position X="2.417" Y="0.8" Height="0.958" Width="1.95" />
+  </Comment>
+  <Comment CommentText="Abstrakta klasser går inte att instansiera direkt. De går endast att ärva.">
+    <Position X="9.758" Y="2.7" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="ArvPolymorfsim.Person">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAEAAAAQAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArvPolymorfsim.Student">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArvPolymorfsim.Teacher">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
