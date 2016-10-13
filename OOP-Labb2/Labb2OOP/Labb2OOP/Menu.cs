@@ -168,7 +168,7 @@ namespace Labb2OOP
 
             Console.WriteLine("Name: ");
             String name = Console.ReadLine();
-
+            k
             Console.WriteLine("How many times a year does it shred i´ts skin: ");
             int shredSkinAYear = 0;
             bool isNumber3 = false;
