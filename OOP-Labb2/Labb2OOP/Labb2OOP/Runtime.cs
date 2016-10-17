@@ -19,11 +19,11 @@ namespace Labb2OOP
         public void AddSomeAnimals()
         {
             
-            Dog dog = new Dog(12, 25, 4, "Hassan", true, true);
+            Dog dog = new Dog(12, 25, 4, "Ludde", true, true);
             Dog dog1 = new Dog(12, 25, 4, "Hassan", false, false);
-            Snake snake = new Snake(25, 1, 0, "Snakey", 10, true);
+            Snake snake = new Snake(25, 1, 0, "Ronja", 10, true);
             Snake snake1 = new Snake(25, 1, 0, "Snakey", 10, false);
-            Owl owl = new Owl(30, 6, 2, "Owley", true, 40);
+            Owl owl = new Owl(30, 6, 2, "Test", true, 40);
             Owl owl1 = new Owl(30, 6, 2, "Owley", false, 40);
 
             Console.WriteLine(owl.PresentAnimal());
