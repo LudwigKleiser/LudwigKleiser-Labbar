@@ -53,6 +53,8 @@ namespace Labb2OOP
             Lists.Snakes.Add(snake);
             Lists.Snakes.Add(snake1);
 
+            Console.WriteLine("Det här är bara ett test. Tryck på någon knapp för att gå vidare");
+            Console.ReadKey(true);
 
 
         }

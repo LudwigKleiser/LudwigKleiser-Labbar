@@ -249,7 +249,7 @@ namespace Labb2OOP
                 if (!isNumber) Console.WriteLine("Please enter a number");
             }
 
-            Console.Write("Weight: ");
+            Console.Write("Weight(kg): ");
             int weight = 0;
             bool isNumber1 = false;
             while (!isNumber1)
@@ -323,7 +323,7 @@ namespace Labb2OOP
                 if (!isNumber) Console.WriteLine("Please enter a number");
             }
 
-            Console.Write("Weight: ");
+            Console.Write("Weight(kg): ");
             int weight = 0;
             bool isNumber1 = false;
             while (!isNumber1)
@@ -397,7 +397,7 @@ namespace Labb2OOP
                 if (!isNumber) Console.WriteLine("Please enter a number");
             }
 
-            Console.Write("Weight: ");
+            Console.Write("Weight(kg): ");
             int weight = 0;
             bool isNumber1 = false;
             while (!isNumber1)
