@@ -7,7 +7,7 @@ namespace Labb2OOP
 {
     public class Snake : Reptile
     {
-        public bool SplitTongue { get; set; }
+        public bool SplitTongue { get; set; } 
         
 
         public Snake(int age, int weight, int numberOfLegs, string name, int shredSkinAYear, bool splitTongue) : base(age, weight, numberOfLegs, name, shredSkinAYear)
