@@ -46,11 +46,6 @@ namespace OOP_Labb4
             }
 
 
-           //Console.WriteLine("You have {0} {1}(s)", subset.Length, carToSearch);
-
-            //Car singleCar = Car.cars.SingleOrDefault(car => String.Equals(car, carToSearch));
-            //Console.WriteLine("You have{0} {1}(s)", singleCar.Model, carToSearch);
-            //Console.ReadKey(true);
 
 
 

@@ -12,7 +12,7 @@ namespace OOP_Labb4
         public string Model { get; set; }
         public bool IsUsed { get; set; }
         public int NumberOfUnits { get; set; } = 0;
-        public int NumberOfUsedUnits { get; set; } = 0;
+       
 
 
     }
