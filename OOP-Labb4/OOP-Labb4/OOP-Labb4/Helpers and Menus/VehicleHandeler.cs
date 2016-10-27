@@ -12,19 +12,37 @@ namespace OOP_Labb4
         public static void ShowAllVehicles()
         {
             Console.Clear();
-            Console.WriteLine("Cars");
-            foreach (Car car in Car.cars)
+            //Console.WriteLine("Cars");
+            //foreach (Car car in Car.cars)
+            //{
+            //    Console.WriteLine("Manufacturer: {0} Value: {1}$ Model: {2} and {3} number of units: {4}"
+            //        , car.Manufacturer, car.Price, car.Model, BoolToPrint(car.IsUsed), car.NumberOfUnits);
+            //}
+            //Console.WriteLine("\nBikes");
+            //foreach (Motorbike motorbike in Motorbike.bikes)
+            //{
+            //    Console.WriteLine("Manufacturer: {0} Value: {1}$ Model: {2} and {3} number of units {4}"
+            //        , motorbike.Manufacturer, motorbike.Price, motorbike.Model, BoolToPrint(motorbike.IsUsed), motorbike.NumberOfUnits);
+            //}
+
+            var sortedCars = Car.cars.OrderBy(x => x.Manufacturer).ToList();
+
+            foreach (var car in sortedCars)
             {
                 Console.WriteLine("Manufacturer: {0} Value: {1}$ Model: {2} and {3} number of units: {4}"
-                    , car.Manufacturer, car.Price, car.Model, BoolToPrint(car.IsUsed), car.NumberOfUnits);
+                   , car.Manufacturer, car.Price, car.Model, BoolToPrint(car.IsUsed), car.NumberOfUnits);
             }
-            Console.WriteLine("\nBikes");
-            foreach (Motorbike motorbike in Motorbike.bikes)
+
+            var sortedBikes = Motorbike.bikes.OrderBy(x => x.Manufacturer).ToList();
+            foreach (var bike in sortedBikes)
             {
-                Console.WriteLine("Manufacturer: {0} Value: {1}$ Model: {2} and {3} number of units {4}"
-                    , motorbike.Manufacturer, motorbike.Price, motorbike.Model, BoolToPrint(motorbike.IsUsed), motorbike.NumberOfUnits);
+                Console.WriteLine("Manufacturer: {0} Value: {1}$ Model: {2} and {3} number of units: {4}"
+                   , bike.Manufacturer, bike.Price, bike.Model, BoolToPrint(bike.IsUsed), bike.NumberOfUnits);
             }
+
             Console.ReadKey(true);
+
+
 
 
 
