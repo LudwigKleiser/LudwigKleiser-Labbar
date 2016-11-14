@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace OOP_Labb8_VG
 {
-    class Program
+    class Product
     {
-        static void Main(string[] args)
-        {
-            var runtime = new Runtime();
-            runtime.Start();
-        }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public float Price { get; set; }
+
     }
 }
