@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace OOP_Labb14
+{
+    public class Publication 
+    {
+        public string Title { get; set; }
+        public Author Author { get; set; }
+        public DateTime ReleaseDate { get; set; }
+
+    }
+}
