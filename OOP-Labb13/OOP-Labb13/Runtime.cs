@@ -12,10 +12,14 @@ namespace OOP_Labb13
     class Runtime
     {
         private event PrintMessage WrongInput;
-        ItemFilter isCheapFilter = ItemFilters.IsCheap;
+
+       
+	
+		ItemFilter isCheapFilter = ItemFilters.IsCheap;
         ItemFilter isOldFilter = ItemFilters.IsOld;
-        ItemFilter isFreshFilter = ItemFilters.IsFresh;
-        
+        ItemFilter isFreshFilter = ItemFilters.IsFresh; 
+    
+
         public void Start()
         {
             WrongInput += new PrintMessage(WrongInputErrorMessage);
